@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+/*Mensagem email ou senha invalidos!*/
+#snackbarss {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbarss {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbarss.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+/*Mensagem Erro ao tentar cadastrar usuario*/
+#snackbars {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbars {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbars.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+/*mensagem sucesso*/
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+/*Modal recuperação*/
+.modal {
+    width: 35%;
+    height: 35%;
+    position: fixed;
+    bottom: 1;
+    margin-top: 8%;
+    margin-left: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(230, 193, 193);
+    border-radius: 3%;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+  .container_conteudo{
+      margin-left: 5%;
+  }
+  .btn-enviar{
+    width: 40%;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(240, 9, 9);   
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0px 5px 20px -12px rgb(82, 82, 82);
+  }
+  
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: -20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #8d0000;
+  }
+
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: #eee;
+    /*background-image: linear-gradient(to right,rgb(201, 47, 47) rgb(91, 112, 133)11);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animacao_main-login 3s;
+}
+
+/* Animação da div */
+@keyframes animacao_main-login {
+    0%   { width: 0%; opacity: 0; }
+    100% { width: 100%; opacity: 1; }
+}
+
+
+.lado-esquerdo > h1{
+    font-size: 3vw;
+    color: #333;
+}
+.lado-esquerdo-img{
+    width: 25vw;
+}
+
+.lado-esquerdo{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.lado-direito{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    color: rgb(255, 255, 255);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #109ae9e1;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #111;
+}
+/* background: #109ae9e1;*/
+.card-login > h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    margin: 0;
+    font-size: 32px;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 12pt;
+    box-shadow:0px 10px 40px #00000056 ;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.textfield > label{
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #eee;
+}
+
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #222;   
+    background: #eee;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px -12px rgb(82, 82, 82);
+}
+.btn_login:hover{
+    width: 20%;
+}
+
+#footer {
+    background: #222;
+    color: #eee;
+    padding: 30px;
+    text-align: center;
+}
+
+ a:link{
+    color: black; 
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(3, 3, 3);
+}
+a:hover{
+    text-decoration: underline;
+    color: #00CDCD;
+
+}
+
+@media only screen and (max-width:950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .lado-esquerdo > h1 {
+        display: none;
+    }
+
+    .lado-esquerdo{
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-direito{
+        width: 100%;
+        height: auto;
+    }
+
+    .lado-esquerdo-img{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+
+    
+     
+}
+
+
+
+
+
+
+
+
